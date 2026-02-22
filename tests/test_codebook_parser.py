@@ -3,11 +3,20 @@ from src.codebook_parser import parse_codebook
 
 
 class TestCodebookParser(unittest.TestCase):
-    """Test for parse_codebook function."""
+    """Test for parse_codebook function.
+    
+    These tests together verify that the parser correctly extracts the codebook values
+    We test 3 representative cases
+    - AA4 as a standard categorical variable (Yes, No, DK, NA pattern)
+    - BA50 as the master branching variable with exactly 3 codes
+    - AG2 as a continuous variable which should not have code mapping
+    """
 
     @classmethod
     def setUpClass(cls):
-        """Parse the codebook once for al tests"""
+        """Parse the codebook once for all tests
+        Parsing is slow so we want to re-use the parsed values for each method tested
+        """
         cls.codebook = parse_codebook("data/37202-0003-Codebook-waves_MULTI.pdf")
 
     def test_aa4_has_correct_codes(self):
@@ -19,7 +28,7 @@ class TestCodebookParser(unittest.TestCase):
         self.assertEqual(aa4['codes'][9], 'NA')
 
     def test_ba50_has_three_broaching_codes(self):
-        """BA50 is the master brnaching variable with 3 values (from codebook p.59)"""
+        """BA50 is the master branching variable with 3 values (from codebook p.59)"""
         ba50 = self.codebook['BA50']
         self.assertIn(1, ba50['codes'])
         self.assertIn(2, ba50['codes'])
