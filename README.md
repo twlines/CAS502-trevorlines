@@ -1,4 +1,5 @@
 # CAS502-trevorlines-dericktangap
+
 This repo exists for the CAS 502 project, where we focus on examining entrepreneurial data.
 
 Entrepreneurial Journey in Data
@@ -32,9 +33,44 @@ x) disengaged
 Movement Calculator — Track stage transitions across survey waves
 
 Extended Goals
-Predictive model for venture success probability
-Pattern identification among successful founders
-Anti-pattern detection for high-risk trajectories
+
+- Predictive model for venture success probability
+- Pattern identification among successful founders
+- Anti-pattern detection for high-risk trajectories
+
+## Author: 
+
+Trevor Lines
+
+## Bug Reporting and Feature Requests
+
+Please open an issue on [github issue page](https://github.com/twlines/CAS502-trevorlines-dericktangap/issues)
+
+Include 
+- Description of bug
+- How to reproduce
+- Expected behavior
+
+## Contributions
+
+1) Fork repository
+2) Create a feature branch 
+3) Make changes and commit 
+4) Push your fork and open a PR
+
+## Installation 
+
+See [INSTALL.md](https://github.com/twlines/CAS502-trevorlines-dericktangap/blob/main/install.md)
+
+## Usage
+
+See [USAGE.md](https://github.com/twlines/CAS502-trevorlines-dericktangap/blob/main/USAGE.md)
+
+## License
+
+See [License](https://github.com/twlines/CAS502-trevorlines-dericktangap/blob/main/LICENSE.md)
+
+
 
 Repository Structure
 ├── data/           # Raw and processed data (gitignored)
