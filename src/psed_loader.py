@@ -43,10 +43,10 @@ if __name__ == "__main__":
     # Decode all columns
     for column in df.columns:
         if column in codebook:
-        if codebook[column]['type'] == 'categorical':
-            df = decode_categorical(df, column, codebook[column])
-        else:
-            df = clean_continuous(df, column, [98, 99])
+            if codebook[column]['type'] == 'categorical':
+                df = decode_categorical(df, column, codebook[column])
+            else:
+                df = clean_continuous(df, column, [98, 99])
 
     # Save decoded data
     df.to_csv("data/decoded_psed.csv", index=False)
