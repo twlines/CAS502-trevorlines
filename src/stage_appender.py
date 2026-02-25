@@ -6,7 +6,7 @@ respondent first reached Launched, Sustainable, and Scalable stages and appends 
 """
 
 import pandas as pd
-from success_classifier import (
+from src.success_classifier import (
     _has_valid_value,
     STAGE_SCALABLE,
     STAGE_SUSTAINABLE,
