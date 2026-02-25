@@ -44,6 +44,7 @@ if __name__ == "__main__":
     for column in df.columns:
         if column in codebook:
             if codebook[column]['type'] == 'categorical':
+                df[column] = pd.to_numeric(df[column], errors='coerce') #converts columns to numeric, TSV loads some values as strings, mapping needs integers
                 df = decode_categorical(df, column, codebook[column])
             else:
                 df = clean_continuous(df, column, [98, 99])
