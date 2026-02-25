@@ -1,5 +1,11 @@
 import pandas as pd
 
+# Stage constants
+STAGE_SCALABLE = "Scalable"
+STAGE_SUSTAINABLE = "Sustainable"
+STAGE_LAUNCHED = "Launched"
+STAGE_OTHER = "other"
+
 def _has_valid_value(value, valid_values):
     """Check if value is valid (not NaN) and in valid_values (e.g., 'Yes')"""
     if pd.isna(value):
@@ -21,13 +27,13 @@ def _is_scalable(row):
 def _classify_row(row):
     """Classify single respondent's stage."""
     if _is_scalable(row):
-        return "Scalable"
+        return STAGE_SCALABLE
     if _is_sustainable(row):
-        return "Sustainable"
+        return STAGE_SUSTAINABLE
     if _is_launched(row):
-        return "Launched"
+        return STAGE_LAUNCHED
      
-    return "other"
+    return STAGE_OTHER
 
 def classify_success_stage(df):
     """Classify venture stage for all respondents in DF."""
