@@ -59,8 +59,8 @@ def find_first_transitions(df):
         return None
 
     #Then call the helper with each set
-    df['fist_launched'] = df.apply(lambda row: find_first(row, launched_stages), axis=1)
-    df['find_sustainable'] = df.apply(lambda row: find_first(row, sustainable_stages), axis=1)
-    df['find_scalable'] = df.apply(lambda row: find_first(row, scalable_stages), axis=1)
+    df['first_launched'] = df.apply(lambda row: find_first(row, launched_stages), axis=1)
+    df['first_sustainable'] = df.apply(lambda row: find_first(row, sustainable_stages), axis=1)
+    df['first_scalable'] = df.apply(lambda row: find_first(row, scalable_stages), axis=1)
 
     return df
