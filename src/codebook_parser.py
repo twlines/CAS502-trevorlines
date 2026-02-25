@@ -22,30 +22,32 @@ def parse_codebook(pdf_path):
             #In parsing teh codebook, we have to distinguish between values that require translation and values that do not. 
 
             # track which variable we are currently parsing
-            current_var = None
+            current_vars = []
 
             for line in lines:
                 #This loop detects variable name lines.
                 #PSED variable names follow this pattern: letters + digit + optional suffix (e.g., AA4, BE52_W1)
                 #Match at line start (^) to distinguish from description with similar text
-                var_match = re.match(r'^([A-Z]+\d[A-Z0-9_]*)\s+', line) 
-                if var_match:
-                    current_var = var_match.group(1)
-                    if current_var not in codebook:
-                        codebook[current_var] = {'codes': {}, 'type': 'categorical'}
+                var_matches = re.findall(r'([A-Z]+\d[A-Z0-9_]*)', line)
+                if var_matches:
+                    current_vars = var_matches
+                    for v in current_vars:
+                        if v not in codebook:
+                            codebook[v] = {'codes': {}, 'type': 'categorical'}
 
                 #Detect code-label pairs i.e. "1. Yes" or "5. No")
                 #Filters out noise in text by requiring label to start with a letter. 
                 code_match = re.search(r'(\d+)\.\s+([A-Za-z].+)', line)
-                if code_match and current_var:
+                if code_match and current_vars:
                     code = int(code_match.group(1))
                     label = code_match.group(2).strip()
-                    codebook[current_var]['codes'][code] = label
+                    for v in current_vars:
+                        codebook[v]['codes'][code] = label
 
                 # Detect continuous variables (example: "Code number of owners")
                 if re.search(r'CODE\s+(NUMBER|AMOUNT|PERCENT)', line):
-                    if current_var:
-                        codebook[current_var]['type'] = 'continuous'
+                    for v in current_vars:
+                        codebook[v]['type'] = 'continuous'
 
     return codebook 
 
