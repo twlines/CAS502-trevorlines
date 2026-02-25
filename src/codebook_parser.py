@@ -29,12 +29,12 @@ def parse_codebook(pdf_path):
                 #PSED variable names follow this pattern: letters + digit + optional suffix (e.g., AA4, BE52_W1)
                 #Match at line start (^) to distinguish from description with similar text
                 var_matches = re.findall(r'([A-Z]+\d[A-Z0-9_]*)', line)
-                if var_matches:
+                if var_matches and re.match(r'[A-Z]+\d', line):
                     current_vars = var_matches
                     for v in current_vars:
                         if v not in codebook:
                             codebook[v] = {'codes': {}, 'type': 'categorical'}
-
+            
                 #Detect code-label pairs i.e. "1. Yes" or "5. No")
                 #Filters out noise in text by requiring label to start with a letter. 
                 code_match = re.search(r'(\d+)\.\s+([A-Za-z].+)', line)
