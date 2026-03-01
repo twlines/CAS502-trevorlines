@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "PSED Entrepreneurial Journey Analyzer"
+abstract: >-
+  Python toolkit for processing and analyzing the Panel Study of
+  Entrepreneurial Dynamics (PSED I & II) datasets. Parses PDF codebooks
+  into machine-readable dictionaries, decodes survey response codes into
+  human-readable labels, classifies ventures into success stages, and
+  tracks stage transitions across longitudinal survey waves.
+authors:
+  - family-names: Lines
+    given-names: Trevor
+    affiliation: "Arizona State University"
+license: MIT
+repository-code: "https://github.com/twlines/CAS502-trevorlines-dericktangap"
+version: "1.0.0"
+date-released: "2026-03-01"
+keywords:
+  - entrepreneurship
+  - PSED
+  - longitudinal-analysis
+  - venture-success
+  - codebook-parser
