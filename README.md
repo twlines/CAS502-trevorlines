@@ -1,10 +1,10 @@
-# CAS502-trevorlines-dericktangap
+# CAS502-trevorlines
 
 This repo exists for the CAS 502 project, where we focus on examining entrepreneurial data.
 
 Entrepreneurial Journey in Data
 
-CAS 502 Team Project — Trevor Lines & Derick Tangap
+CAS 502 Project — Trevor Lines
 
 Overview
 This project analyzes data from entrepreneurs to understand what separates successful ventures from unsuccessful ones. We're building Python scripts to process, classify, and analyze the PSED I & II datasets.
@@ -44,7 +44,7 @@ Trevor Lines
 
 ## Bug Reporting and Feature Requests
 
-Please open an issue on [github issue page](https://github.com/twlines/CAS502-trevorlines-dericktangap/issues)
+Please open an issue on [github issue page](https://github.com/twlines/CAS502-trevorlines/issues)
 
 Include 
 - Description of bug
@@ -60,15 +60,15 @@ Include
 
 ## Installation 
 
-See [INSTALL.md](https://github.com/twlines/CAS502-trevorlines-dericktangap/blob/main/install.md)
+See [INSTALL.md](https://github.com/twlines/CAS502-trevorlines/blob/main/install.md)
 
 ## Usage
 
-See [USAGE.md](https://github.com/twlines/CAS502-trevorlines-dericktangap/blob/main/USAGE.md)
+See [USAGE.md](https://github.com/twlines/CAS502-trevorlines/blob/main/USAGE.md)
 
 ## License
 
-See [License](https://github.com/twlines/CAS502-trevorlines-dericktangap/blob/main/LICENSE.md)
+See [License](https://github.com/twlines/CAS502-trevorlines/blob/main/LICENSE.md)
 
 
 
