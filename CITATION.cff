@@ -23,3 +23,22 @@ keywords:
   - longitudinal-analysis
   - venture-success
   - codebook-parser
+references:
+  - type: data
+    title: "Panel Study of Entrepreneurial Dynamics, PSED II, United States, 2005-2011"
+    authors:
+      - family-names: Curtin
+        given-names: Richard T.
+      - family-names: Reynolds
+        given-names: Paul D.
+    doi: "10.3886/ICPSR37202.v1"
+    repository: "https://www.icpsr.umich.edu/web/ICPSR/studies/37202"
+  - type: data
+    title: "Panel Study of Entrepreneurial Dynamics, PSED I, United States, 1998-2004"
+    authors:
+      - family-names: Curtin
+        given-names: Richard T.
+      - family-names: Reynolds
+        given-names: Paul D.
+    doi: "10.3886/ICPSR37203.v1"
+    repository: "https://www.icpsr.umich.edu/web/ICPSR/studies/37203"
