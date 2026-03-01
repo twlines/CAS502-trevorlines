@@ -13,6 +13,7 @@ authors:
     given-names: Trevor
     affiliation: "Arizona State University"
 license: MIT
+doi: "10.5281/zenodo.18825601"
 repository-code: "https://github.com/twlines/CAS502-trevorlines-dericktangap"
 version: "0.1.0"
 date-released: "2026-03-01"
